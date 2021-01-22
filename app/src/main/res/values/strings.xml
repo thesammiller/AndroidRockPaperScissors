@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RockPaperScissors</string>
+    <string name="rock_image">Rock</string>
+    <string name="paper_image">Paper</string>
+    <string name="scissors_image">Scissors</string>
+    <string name="blank_image">Blank</string>
+    <string name="score">Player: 0 Computer: 0 </string>
+    <string name="menu_random">Random</string>
+    <string name="menu_memory">Memory</string>
+    <string name="menu_alternative">Alternative</string>
+
+</resources>

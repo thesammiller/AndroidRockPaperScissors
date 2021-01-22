@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="5dp"
+        app:layout_constraintGuide_percent="0.10">
+        <Spinner
+            android:id="@+id/strategy_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/menu_frame"
+        tools:layout_editor_absoluteX="5dp">
+        <TextView
+            android:id="@+id/ScoreField"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/score"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/move_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/score_frame">
+        <LinearLayout
+            android:id="@+id/moveTop"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/computer_move"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/blank_image"
+                android:layout_marginVertical="8dp"
+                android:layout_gravity="center"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:src="@drawable/blank">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moveBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/player_move"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:contentDescription=""
+                android:layout_gravity="center"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:src="@drawable/blank">
+            </ImageView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_frame"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/move_frame"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/rock_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rock_image"
+            android:onClick="rockButton"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/paper_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paper_image"
+            android:onClick="paperButton"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/scissors_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scissors_image"
+            android:onClick="scissorsButton"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>
